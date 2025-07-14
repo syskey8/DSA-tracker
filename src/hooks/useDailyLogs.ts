@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { supabase, type DailyLog, type Username } from '@/lib/supabase';
-import { format, parseISO, startOfDay, endOfDay } from 'date-fns';
+import { format } from 'date-fns';
 
 export function useDailyLogs(username?: Username) {
   const [logs, setLogs] = useState<DailyLog[]>([]);

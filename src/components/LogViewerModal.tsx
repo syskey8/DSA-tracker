@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import { format, parseISO } from 'date-fns';
-import { Calendar, Tag, Star, User } from 'lucide-react';
+import { Calendar, Tag, Star } from 'lucide-react';
 import {
   Dialog,
   DialogContent,

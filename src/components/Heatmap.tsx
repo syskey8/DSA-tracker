@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import { useMemo, useState } from 'react';
-import { format, parseISO, startOfWeek, addDays, subDays, isToday, isSameDay } from 'date-fns';
+import { format, addDays, subDays, isToday } from 'date-fns';
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip';
 import { LogViewerModal } from '@/components/LogViewerModal';
 import type { DailyLog, Username } from '@/lib/supabase';
@@ -27,7 +27,7 @@ export function Heatmap({ logs, username, className = '' }: HeatmapProps) {
     let currentDate = startDate;
     while (currentDate <= endDate) {
       const dateStr = format(currentDate, 'yyyy-MM-dd');
-      const log = userLogs.find(l => l.date === dateStr);
+      const log = userLogs.find(l => l.date === dateStr) ?? null;
       
       let level = 0;
       if (log) {

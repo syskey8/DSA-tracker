@@ -1,5 +1,5 @@
 import { useMemo } from 'react';
-import { format, parseISO, differenceInDays, isToday, isYesterday, subDays } from 'date-fns';
+import { format, parseISO, differenceInDays, subDays } from 'date-fns';
 import type { DailyLog, Username } from '@/lib/supabase';
 
 export function useStreaks(logs: DailyLog[], username: Username) {

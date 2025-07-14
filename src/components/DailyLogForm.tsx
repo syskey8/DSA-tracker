@@ -61,7 +61,6 @@ export function DailyLogForm({ username, existingLog, trigger, onSuccess }: Dail
   });
 
   const watchedTags = form.watch('tags');
-  const watchedEffort = form.watch('effort_level');
 
   const onSubmit = async (data: LogFormData) => {
     try {
